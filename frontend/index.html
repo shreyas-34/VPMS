@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vehicle Parking Management - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="content">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a href="vehicles.html">Vehicles</a></li>
+        <li><a href="parking_slots.html" class="nav-link">Parking Slots</a></li>
+        <li><a href="parking_lots.html" class="nav-link">Parking Lots</a></li>
+        <li><a href="payments.html" class="nav-link">Payments</a></li>
+        <li><a href="login.html" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">PARKING, WITHOUT THE PLOT TWIST</span>
+          <h1>Your spot.<br />Your smooth arrival.</h1>
+          <p>Find a space, manage your ride, and get on with your day. Parking drama: cancelled.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="parking_slots.html">Explore parking slots</a>
+            <a class="text-link" href="parking_lots.html">Browse parking lots &rarr;</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="parking-sign">P</span>
+          <span class="road-line"></span>
+          <span class="car">🚗</span>
+          <span class="sparkle sparkle-one">✦</span>
+          <span class="sparkle sparkle-two">✦</span>
+        </div>
+      </section>
+
+      <section class="feature-section" aria-labelledby="features-title">
+        <div class="section-heading">
+          <span class="eyebrow">YOUR PARKING SIDEKICK</span>
+          <h2 id="features-title">Less circling. More living.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">⌖</span>
+            <h3>Find your fit</h3>
+            <p>Check out parking lots and available spaces in a few clicks.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">↗</span>
+            <h3>Keep it moving</h3>
+            <p>Manage your vehicles, slots, and payments all in one place.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">☺</span>
+            <h3>Arrive happy</h3>
+            <p>Spend less time hunting for a spot and more time where you’re going.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    Made for smoother arrivals · Vehicle Parking Management System
+  </footer>
+</body>
+</html>
