@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parking Slots Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="parking_slots.js" defer></script>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="vehicles.html">Vehicles</a></li><li><a href="parking_slots.html" class="nav-link">Parking Slots</a></li>
+    <li><a href="parking_lots.html" class="nav-link">Parking Lots</a></li>
+    <li><a href="payments.html" class="nav-link">Payments</a></li>
+       <li><a href="login.html" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <h1>Parking Slots Management</h1>
+
+    <h2>Add New Slot</h2>
+    <form id="add-slot-form">
+      <input type="number" id="lot_id" placeholder="Lot ID" required />
+      <input type="text" id="slot_number" placeholder="Slot Number" required />
+      <select id="status">
+        <option value="available" selected>Available</option>
+        <option value="occupied">Occupied</option>
+        <option value="reserved">Reserved</option>
+      </select>
+      <input type="number" id="vehicle_id" placeholder="Vehicle ID (optional)" />
+      <button type="submit">Add Slot</button>
+    </form>
+
+    <h2>Parking Slots List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Slot ID</th>
+          <th>Lot ID</th>
+          <th>Slot Number</th>
+          <th>Status</th>
+          <th>Vehicle ID</th>
+          <th>Last Updated</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="slots-list"></tbody>
+    </table>
+  </div>
+
+</body>
+</html>

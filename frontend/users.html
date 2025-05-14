@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vehicle Parking Management - Vehicles</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="vehicles.html">Vehicles</a></li><li><a href="Parking_slots.html" class="nav-link">Parking Slots</a></li>
+    <li><a href="parking_lots.html" class="nav-link">Parking Lots</a></li>
+    <li><a href="payments.html" class="nav-link">Payments</a></li>
+       <li><a href="login.html" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+  <h1>Manage Users</h1>
+
+  <section>
+    <h2>Register New User</h2>
+    <input type="text" id="new_name" placeholder="Name" required />
+    <input type="email" id="new_email" placeholder="Email" required />
+    <input type="password" id="new_password" placeholder="Password" required />
+    <input type="text" id="new_phone" placeholder="Phone" />
+    <select id="new_role">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+      <option value="staff">Staff</option>
+    </select>
+    <center>
+      <button onclick="registerUser()">Register User</button>
+    </section>
+  </center>
+
+  <!-- <section>
+    <h2>Users List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="user-list"></tbody>
+    </table>
+  </section> -->
+
+  <footer>
+    © 2025 Vehicle Parking Management System. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vehicle Parking Management - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="content">
+  
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="vehicles.html">Vehicles</a></li><li><a href="parking_slots.html" class="nav-link">Parking Slots</a></li>
+    <li><a href="parking_lots.html" class="nav-link">Parking Lots</a></li>
+    <li><a href="payments.html" class="nav-link">Payments</a></li>
+       <li><a href="login.html" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+  <h2>Parking Lots</h2>
+
+<form id="parking-lot-form">
+  <input type="hidden" id="lot_id" />
+  <label>Name: <input type="text" id="name" required /></label><br/>
+  <label>Location:  <input type="text" id="location" required /></label><br/>
+  <label>Total Slots: <input type="number" id="total_slots" min="1" required /></label><br/>
+  <label>Available Slots: <input type="number" id="available_slots" min="0" required /></label><br/>
+  <label>Price Per Hour: <input type="number" id="price_per_hour" step="0.01" min="0" required /></label><br/>
+  <button type="submit">Add / Update Parking Lot</button>
+  <button type="button" id="cancel-edit" style="display:none;">Cancel Edit</button>
+</form>
+
+<table border="1" id="parking-lot-list">
+  <thead>
+    <tr>
+      <th>ID</th><th>Name</th><th>Location</th><th>Total Slots</th><th>Available Slots</th><th>Price Per Hour</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>

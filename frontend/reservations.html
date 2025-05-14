@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parking Slots Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="parking_slots.js" defer></script>
+</head>
+<body>
+
+ <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="vehicles.html">Vehicles</a></li><li><a href="parking_slots.html" class="nav-link">Parking Slots</a></li>
+    <li><a href="parking_lots.html" class="nav-link">parking Lots</a></li>
+    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+    <li><a href="payments.html" class="nav-link">Payments</a></li>
+       <li><a href="login.html" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+<h2>Reservations</h2>
+
+<form id="reservation-form">
+  <label>User:
+    <select id="reservation_user_id" required></select>
+  </label><br>
+
+  <label>Slot:
+    <select id="reservation_slot_id">
+      <option value="">-- Select slot (optional) --</option>
+    </select>
+  </label><br>
+
+  <label>Vehicle Number:
+    <input type="text" id="reservation_vehicle_number" required />
+  </label><br>
+
+  <label>Start Time:
+    <input type="datetime-local" id="reservation_start_time" required />
+  </label><br>
+
+  <label>End Time:
+    <input type="datetime-local" id="reservation_end_time" required />
+  </label><br>
+
+  <button type="submit">Add Reservation</button>
+</form>
+
+<table border="1" id="reservation-list" style="margin-top: 20px; width: 100%;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Slot</th>
+      <th>Vehicle Number</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Status</th>
+      <th>Payment Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>

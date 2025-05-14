@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Vehicle Parking Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: #222;
+      padding: 30px;
+      border-radius: 8px;
+      width: 300px;
+    }
+    input, select, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    input, select {
+      background: #333;
+      color: white;
+    }
+    button {
+      background: red;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <input id="email" type="email" placeholder="Email" required />
+    <input id="password" type="password" placeholder="Password" required />
+    <button onclick="login()">Login</button>
+    <p id="message" style="color: red;"></p>
+  </div>
+
+  <script>
+    // Dummy users for demo - replace with real API call
+    const users = [
+      { email: 'admin@example.com', password: 'admin123', role: 'admin' },
+      { email: 'user@example.com', password: 'user123', role: 'user' },
+      { email: 'staff@example.com', password: 'staff123', role: 'staff' }
+    ];
+
+    function login() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const message = document.getElementById('message');
+
+      const user = users.find(u => u.email === email && u.password === password);
+      if (!user) {
+        message.textContent = 'Invalid email or password.';
+        return;
+      }
+
+      // Save role to localStorage
+      localStorage.setItem('userRole', user.role);
+
+      // Redirect to dashboard or home page
+      window.location.href = 'index.html'; // Adjust to your main page
+    }
+  </script>
+</body>
+</html>
