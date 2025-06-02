@@ -36,7 +36,13 @@ cd frontend
 python -m http.server 8080
 ```
 
-The data features need the API and a running MySQL database. Configure the database connection in `backend/server.js`, then start the API in a second terminal:
+The data features need the API and a running MySQL database named `VPMS` on localhost. Set the database password before starting the API:
+
+```powershell
+$env:DB_PASSWORD = "your-mysql-password"
+```
+
+Then start the API in a second terminal:
 
 ```bash
 cd backend
